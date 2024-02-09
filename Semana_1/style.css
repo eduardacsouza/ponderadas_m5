@@ -3,6 +3,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh; /* altura da viewport */
+  background-image: url(images/ceu_estrelado.jpeg);
+  background-color: cover;
 }
 
 .sol {
@@ -13,26 +15,35 @@ body {
   background-size: cover;
   border-radius: 50%;
   margin: 1vw auto; /* margem relativa à largura da viewport */
-  animation: brilho 3s linear infinite alternate;
+  animation: brilho 3s linear infinite alternate, rotate 50s linear infinite;
 
 }
 @keyframes brilho{
     0% {
-        box-shadow: 0 0 100px 30px rgba(255, 255, 0, 0.5), inset -10px -10px 15px #842800, inset 3px 3px 5px #ffa578; /* Sombra inicial */
+        box-shadow: 0 0 300px 50px rgba(255, 153, 0, 0.5), inset -10px -10px 15px #ff7300, inset 3px 3px 5px #ffa578; /* Sombra inicial */
       }
       50% {
-        box-shadow: 0 0 40px 10px rgba(255, 149, 0, 0.9), inset -10px -10px 15px #842800, inset 3px 3px 5px #ffa578; /* Sombra máxima */
+        box-shadow: 0 0 300px 40px rgba(255, 181, 77, 0.826), inset 3px 3px 5px #ffa578; /* Sombra máxima */
       }
       100% {
-        box-shadow: 0 0 100px 20px rgba(255, 255, 0, 0.5), inset -10px -10px 15px #842800, inset 3px 3px 5px #ffa578;
+        box-shadow: 0 0 300px 50px rgba(255, 196, 0, 0.5), inset 10px 10px 15px #ff9100, inset 3px 3px 5px #ffa578;
       }
   }
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
 
 .planeta {
   position: absolute;
   top: 50%;
   left: 50%;
-  border-radius: 50%;
+  border-radius: 100%;
   box-shadow: inset -0.1vw -0.1vw 0.5vw #000000;
 
 
@@ -43,7 +54,7 @@ body {
   background-size: cover;
   width: 1vw; /* largura relativa à largura da viewport */
   height: 1vw; /* altura relativa à largura da viewport */
-  animation: orbit-mercurio 10s linear infinite;
+  animation: orbit-mercurio 12s linear infinite;
 }
 
 @keyframes orbit-mercurio {
@@ -51,7 +62,7 @@ body {
     transform: translate(-50%, -50%) rotate(0deg) translate(5vw) rotate(0deg); /* valores relativos à largura da viewport */
   }
   to {
-    transform: translate(-50%, -50%) rotate(360deg) translate(5vw) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(360deg) translate(5vw) rotate(360deg);
   }
 }
 
@@ -60,7 +71,7 @@ body {
   background-size: cover;
   width: 2vw;
   height: 2vw;
-  animation: orbit-venus 26s linear infinite;
+  animation: orbit-venus 28s linear infinite;
 }
 
 @keyframes orbit-venus {
@@ -68,7 +79,7 @@ body {
     transform: translate(-50%, -50%) rotate(0deg) translate(8vw) rotate(0deg); /* valores relativos à largura da viewport */
   }
   to {
-    transform: translate(-50%, -50%) rotate(360deg) translate(8vw) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(360deg) translate(8vw) rotate(360deg);
   }
 }
 
@@ -77,7 +88,7 @@ body {
   background-size: cover;
   width: 2vw;
   height: 2vw;
-  animation: orbit-terra 7s linear infinite;
+  animation: orbit-terra 13s linear infinite, rotate-terra 20s linear infinite;
 }
 
 @keyframes orbit-terra {
@@ -85,8 +96,11 @@ body {
     transform: translate(-50%, -50%) rotate(0deg) translate(11vw) rotate(0deg); /* valores relativos à largura da viewport */
   }
   to {
-    transform: translate(-50%, -50%) rotate(360deg) translate(11vw) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(360deg) translate(11vw) rotate(360deg);
   }
+}
+@keyframes rotate-terra{
+    to{background-position: 100%;}
 }
 
 .marte {
@@ -94,15 +108,15 @@ body {
   background-size: cover;
   width: 1.5vw;
   height: 1.5vw;
-  animation: orbit-marte 19s linear infinite;
+  animation: orbit-marte 21s linear infinite;
 }
 
 @keyframes orbit-marte {
   from {
-    transform: translate(-50%, -50%) rotate(0deg) translate(14vw) rotate(0deg); /* valores relativos à largura da viewport */
+    transform: translate(-50%, -50%) rotate(0deg) translate(14vw) rotate(0deg) ; /* valores relativos à largura da viewport */
   }
   to {
-    transform: translate(-50%, -50%) rotate(360deg) translate(14vw) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(360deg) translate(14vw) rotate(360deg);
   }
 }
 
@@ -111,7 +125,7 @@ body {
   background-size: cover;
   width: 3vw;
   height: 3vw;
-  animation: orbit-jupiter 11.9s linear infinite;
+  animation: orbit-jupiter 13.9s linear infinite;
 }
 
 @keyframes orbit-jupiter {
@@ -119,7 +133,7 @@ body {
     transform: translate(-50%, -50%) rotate(0deg) translate(17vw) rotate(0deg); /* valores relativos à largura da viewport */
   }
   to {
-    transform: translate(-50%, -50%) rotate(360deg) translate(17vw) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(360deg) translate(17vw) rotate(360deg);
   }
 }
 
@@ -128,7 +142,7 @@ body {
   background-size: cover;
   width: 2.5vw;
   height: 2.5vw;
-  animation: orbit-saturno 29.5s linear infinite;
+  animation: orbit-saturno 31.5s linear infinite;
 }
 
 @keyframes orbit-saturno {
@@ -136,7 +150,7 @@ body {
     transform: translate(-50%, -50%) rotate(0deg) translate(20vw) rotate(0deg); /* valores relativos à largura da viewport */
   }
   to {
-    transform: translate(-50%, -50%) rotate(360deg) translate(20vw) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(360deg) translate(20vw) rotate(360deg);
   }
 }
 
@@ -145,7 +159,7 @@ body {
   background-size: cover;
   width: 2.5vw;
   height: 2.5vw;
-  animation: orbit-urano 44.1s linear infinite;
+  animation: orbit-urano 46.1s linear infinite;
 }
 
 @keyframes orbit-urano {
@@ -153,7 +167,7 @@ body {
     transform: translate(-50%, -50%) rotate(0deg) translate(23vw) rotate(0deg); /* valores relativos à largura da viewport */
   }
   to {
-    transform: translate(-50%, -50%) rotate(360deg) translate(23vw) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(360deg) translate(23vw) rotate(360deg);
   }
 }
 
@@ -170,12 +184,6 @@ body {
     transform: translate(-50%, -50%) rotate(0deg) translate(26vw) rotate(0deg); /* valores relativos à largura da viewport */
   }
   to {
-    transform: translate(-50%, -50%) rotate(360deg) translate(26vw) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(360deg) translate(26vw) rotate(360deg);
   }
 }
-
-
-
-
-
-
