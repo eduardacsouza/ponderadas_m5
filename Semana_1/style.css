@@ -89,7 +89,7 @@ body {
   background-size: cover;
   width: 2vw;
   height: 2vw;
-  animation: orbit-terra 13s linear infinite, rotate-terra 20s linear infinite;
+  animation: orbit-terra 13s linear infinite;
 }
 
 @keyframes orbit-terra {
@@ -99,9 +99,6 @@ body {
   to {
     transform: translate(-50%, -50%) rotate(360deg) translate(11vw) rotate(360deg);
   }
-}
-@keyframes rotate-terra{
-    to{background-position: 100%;}
 }
 
 .marte {
