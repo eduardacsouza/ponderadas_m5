@@ -14,6 +14,7 @@ body {
   height: 6vw; /* altura relativa à largura da viewport */
   background-image: url('images/sol.jpg');
   background-size: cover;
+  background-color: yellow;
   border-radius: 50%;
   margin: 1vw auto; /* margem relativa à largura da viewport */
   animation: brilho 3s linear infinite alternate, rotate 50s linear infinite;
