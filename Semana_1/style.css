@@ -5,6 +5,7 @@ body {
   height: 100vh; /* altura da viewport */
   background-image: url(images/ceu_estrelado.jpeg);
   background-color: cover;
+  overflow: hidden;
 }
 
 .sol {
